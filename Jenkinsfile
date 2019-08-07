@@ -18,11 +18,11 @@ node{
     }
    
    stage("App deployment started"){
-     //sh 'oc login https://api.starter-us-west-1.openshift.com --token=l334xAzzGBl7kvYuUFcvfRCCXMsQxeQJox3pEzbSQrQ'
-     //sh 'oc new project padmavathy'
-     //sh 'oc new-app manee2k6/python-app:pattabhi-1.0 --name python-app'
-     //sh 'oc expose svc python-app --name=python-app'
-     //sh 'oc status'
+     sh 'oc login --token=wgOubf4D2Svb1EM3FiTIkMuFY2jCJxrhMaenHRy9TG0 --server=https://api.us-east-1.online-starter.openshift.com:6443'
+     sh 'oc new project Python'
+     sh 'oc new-app sandeep0074/itrainavenger-dev --name python-app'
+     sh 'oc expose svc python-app --name=python-app'
+     sh 'oc status'
     }
    
     stage('App deployed to Openshift environment') {
