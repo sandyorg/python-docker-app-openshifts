@@ -1,6 +1,6 @@
 # Use an official Python runtime as a parent image
 FROM python:latest
-
+Run pip install newrelic
 MAINTAINER sandeep
 
 # Set the working directory to /app
